@@ -7,7 +7,30 @@ require('dotenv').config();
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(cors());
+
+const allowedOrigins = [
+  'http://localhost:5173',       
+  'https://seba-songjog.web.app/', 
+  'https://assgn10.pages.dev/'     
+];
+
+const corsOptions = {
+  origin: function (origin, callback) {
+
+    if (!origin) {
+      return callback(null, true);
+    }
+
+    if (allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    } else {
+      return callback(new Error('Not allowed by CORS'));
+    }
+  }
+};
+
+app.use(cors(corsOptions));
+
 app.use(express.json());
 
 const client = new MongoClient(process.env.MONGO_URI, {
