@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 5000;
 const baseOrigins = [
   'https://assgn10.pages.dev',
   'https://seba-songjog.vercel.app',
-  'http://localhost:3000',
+  'https://seba-songjog.web.app',
   'http://localhost:5173'
 ];
 
