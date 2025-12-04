@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 5000;
 // CORS Configuration
 const baseOrigins = [
   'https://assgn10.pages.dev',
-  'https://seba-songjog.vercel.app',
+  'https://smsamiulhasansaim-smsamiulhasansaim.onrender.com',
   'https://seba-songjog.web.app',
   'http://localhost:5173',
   'http://localhost:5174'
