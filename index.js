@@ -11,7 +11,8 @@ const baseOrigins = [
   'https://assgn10.pages.dev',
   'https://seba-songjog.vercel.app',
   'https://seba-songjog.web.app',
-  'http://localhost:5173'
+  'http://localhost:5173',
+  'http://localhost:5174'
 ];
 
 const envOrigins = process.env.ALLOWED_ORIGINS 
